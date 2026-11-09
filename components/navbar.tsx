@@ -40,7 +40,7 @@ function LoopMark({ className }: { className?: string }) {
   )
 }
 
-function Logo({ className }: { className?: string }) {
+export function Logo({ className }: { className?: string }) {
   return (
     <Link
       href="/"
@@ -85,9 +85,12 @@ export function Navbar() {
           >
             Sign In
           </Link>
-          <Button className="h-9 rounded-lg bg-[#7c5cfc] px-4 text-white hover:bg-[#6b4bfa]">
+          <Link
+            href="/signup"
+            className="flex h-9 items-center justify-center rounded-lg bg-[#7c5cfc] px-4 text-sm font-medium text-white transition-colors hover:bg-[#6b4bfa]"
+          >
             Get Started
-          </Button>
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -125,12 +128,13 @@ export function Navbar() {
               >
                 Sign In
               </Link>
-              <Button
+              <Link
+                href="/signup"
                 onClick={() => setOpen(false)}
-                className="h-9 flex-1 rounded-lg bg-[#7c5cfc] px-4 text-white hover:bg-[#6b4bfa]"
+                className="flex h-9 flex-1 items-center justify-center rounded-lg bg-[#7c5cfc] px-4 text-sm font-medium text-white transition-colors hover:bg-[#6b4bfa]"
               >
                 Get Started
-              </Button>
+              </Link>
             </div>
           </div>
         )}

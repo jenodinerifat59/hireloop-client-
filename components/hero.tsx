@@ -17,7 +17,7 @@ const STARS = Array.from({ length: 80 }, (_, i) => {
   }
 })
 
-function StarField() {
+export function StarField() {
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0">
       {STARS.map((star, i) => (
